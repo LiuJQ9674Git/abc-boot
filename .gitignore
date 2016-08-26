@@ -1,0 +1,16 @@
+*~
+.DS_Store
+.idea
+npm-debug.log*
+
+.babel-cache/
+coverage/
+
+node_modules
+bower_components
+dist
+.tmp
+.sass-cache
+
+build
+*.bak
