@@ -18,9 +18,9 @@ ReactDom.render(
   </div>
   , document.getElementById('app'));
 
-/**
+
  require( ['./activeButton'], function( activeButton){
 
     console.log("test");
 });
-**/
+

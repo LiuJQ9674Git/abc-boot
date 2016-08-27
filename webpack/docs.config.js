@@ -13,6 +13,7 @@ const entryFile = './react-bootstrap-getting-started/src/App.js';
 //entry: './react-bootstrap-getting-started/src/App.js',
 const entryCommehtsFile = './public/assets/js/demo/comments/entry.js';
 //entry: './public/assets/js/demo/comments/entry.js',
+const entryAngularDemoFile = './public/assets/js/demo/angularwebpack/index.js';
 
 const devEntryBundle = [
   'webpack/hot/dev-server',
@@ -35,6 +36,7 @@ export default {
   entry: {
     bundle: options.debug ? devEntryBundle : entryFile,
     commentsbundle:options.debug ? devEntryBundle : entryCommehtsFile,
+    angulardemobundle:entryAngularDemoFile
   },
 
   output: {
@@ -51,7 +53,7 @@ export default {
       { test: /\.css/,
         loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}`) },
       { test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}!less${cssSourceMap}`) },
+          loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}!less${cssSourceMap}`) },
       { test: /\.json$/, loader: 'json' },
       { test: /\.jpe?g$|\.gif$|\.png|\.ico$/, loader: 'file?name=[name].[ext]' },
       { test: /\.eot$|\.ttf$|\.svg$|\.woff2?$/, loader: 'file?name=[name].[ext]' },
