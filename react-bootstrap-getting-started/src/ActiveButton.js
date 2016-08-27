@@ -8,7 +8,7 @@ define(['react','react-dom','react-bootstrap/lib/ButtonToolbar',
         </ButtonToolbar>
     );
 
-  ReactDom.render(buttonsInstance, document.getElementById('app'));
+  ReactDom.render(buttonsInstance, document.getElementById('appButton'));
 
 });
 

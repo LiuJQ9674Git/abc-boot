@@ -10,10 +10,14 @@ const cssSourceMap = options.debug ? '?sourceMap' : '';
 const reactHot = options.debug ? 'react-hot!' : '';
 
 const entryFile = './react-bootstrap-getting-started/src/App.js';
+//entry: './react-bootstrap-getting-started/src/App.js',
+const entryCommehtsFile = './public/assets/js/demo/comments/entry.js';
+//entry: './public/assets/js/demo/comments/entry.js',
+
 const devEntryBundle = [
   'webpack/hot/dev-server',
   `webpack-dev-server/client?${webpackDevServerAddress}`,
-  entryFile,
+  entryCommehtsFile,
 ];
 
 baseConfig.plugins.push(new ExtractTextPlugin('[name].css'));
@@ -25,14 +29,13 @@ export default {
   ...baseConfig,
 
   devtool: options.debug ? 'source-map' : null,
-  //entry: './react-bootstrap-getting-started/src/App.js',
-  //entry: './public/assets/js/demo/comments/entry.js',
+
 
 
   entry: {
     bundle: options.debug ? devEntryBundle : entryFile,
+    commentsbundle:options.debug ? devEntryBundle : entryCommehtsFile,
   },
-
 
   output: {
     filename: '[name].js',
