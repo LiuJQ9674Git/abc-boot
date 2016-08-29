@@ -14,3 +14,20 @@ dist
 
 build
 *.bak
+
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+*.log
+*.gz
