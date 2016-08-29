@@ -7,12 +7,12 @@ import './styles/custom-styles.css';
 
 import Body from './Body';
 import Footer from './Footer';
-
+import HeaderNavigation from './HeaderNavigation'
 global.React = React;
 
 ReactDom.render(
   <div>
-
+    <HeaderNavigation />
     <Body />
     <Footer />
   </div>

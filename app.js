@@ -5,14 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = require('./express-4x-examples/examples/mvc/index');
 //pass by arguments
 //require('./express-4x-examples/examples/multi-router/bootmulti')(app);
 
 app=require('./express-4x-examples/examples/multi-router/index')(app);
+app=require('./routes/demo/index')(app);
 //var app = express();
 
 // view engine setup
@@ -30,10 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/react-bootstrap',express.static(path.join(__dirname, './react-bootstrap-getting-started')));
 app.use('/build', express.static(path.join(__dirname,'./build')));
 
-app.use('/', routes);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
