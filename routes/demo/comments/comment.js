@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+var commentId=5;
 var comments = require('../../../models/demo/comments/comments').comments;
 router.list = function(req, res){
     res.json(comments);
@@ -43,11 +44,12 @@ router.add = function(req, res){
 
     var newComment = {
         author : req.body.author,
-        text : req.body.text
+        text : req.body.text,
+        id:commentId++
     };
 
     comments.push(newComment);
-    res.json(true);
+    res.json(comments);
 };
 
 module.exports = router;
