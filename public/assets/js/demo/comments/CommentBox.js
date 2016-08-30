@@ -68,6 +68,8 @@ var CommentBox = React.createClass({
       data: comment,
       success: function(data) {
         this.setState({data: data});
+        //自动滚动到底部
+        $("body").scrollTop(Number.MAX_VALUE);
       }.bind(this),
       error: function(xhr, status, err) {
         this.setState({data: comments});
